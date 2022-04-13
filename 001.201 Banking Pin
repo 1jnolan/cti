@@ -1,0 +1,47 @@
+#PIN CHECKER PROGRAM
+"""The following program checks if a user has entered the correct pin"""
+
+#STUDENT NAME: 
+
+
+#********************************************************************************************************
+#---------------------------------Background code and basic info-----------------------------------------
+#********************************************************************************************************
+
+
+#User Pin = 1,2,3,4 as a list
+up=['1','2','3','4']
+
+#Each item in the User Pin list is changed to an int
+up=[int(item)for item in up]
+
+#user Enterened Pin (ep)=blank list
+ep=[]
+
+#Checker to check that the correct number of characters have been entered. 
+def pc():
+    if len(ep)!=len(up):
+        print("You have entered the wrong number of characters for your pin. Please try again")
+    else:
+        if ep==up:
+            print("Correct Password")
+        
+
+#**************************************************************************************************
+#--------------------------------------PROGRAM STARTS HERE:----------------------------------------
+#**************************************************************************************************
+
+
+#Entered password(ep)
+x=(input("Hello and welcome to your online bank\nPlease enter your 4 digit pin:"))
+ep=list(x)
+
+#checking the password:
+for item in ep:
+    ep=[int(item)for item in ep]
+
+#Call in checker (pc):
+pc()
+
+#Add a choice element
+u=input("Please select one of the following options: \n 1. Change Password 2. Exit Programme")
